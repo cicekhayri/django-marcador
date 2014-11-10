@@ -15,4 +15,7 @@
 <br>by <a href="{% url 'marcador_bookmark_user' bookmark.owner.username %}">
   {{ bookmark.onwer.username }}</a>
 {{ bookmark.date_created|timesince }} ago
-
+{% if bookmark.owner == user %}
+  <br><a class="btn btn-default btn-xs" 
+    href="{% url "marcador_bookmark_edit" bookmark.pk %}">Edit bookmark</a>
+{% endif %}

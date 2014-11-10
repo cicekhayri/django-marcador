@@ -14,4 +14,8 @@
   <li>No bookmarks. :(</li>
   {% endfor %}
 </ul>
+{% if user.is_authenticated %}
+<p><a class="btn btn-default" href="{% url "marcador_bookmark_create" %}">
+  Create new bookmark</a></p>
+{% endif %}
 {% endblock %}
