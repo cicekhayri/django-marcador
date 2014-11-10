@@ -25,6 +25,9 @@
 </head>
 <body>
   <div class='container'>
+    {% block toggle_login %}
+      {% include "toggle_login.html" %}
+    {% endblock %}
       <div>
           {% block heading %}{% endblock %}
       </div>
